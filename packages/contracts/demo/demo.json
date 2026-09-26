@@ -1,0 +1,39 @@
+{
+  "title": "Supply agreement, clause 4: payment and assignment",
+  "source_lang": "English",
+  "target_lang": "Persian",
+  "source": [
+    "Payment is due within 30 days of the invoice date.",
+    "Late payments carry interest of 2 percent per month.",
+    "The supplier may not assign this agreement without written consent."
+  ],
+  "filings": [
+    {
+      "name": "faithful",
+      "expected": "certified",
+      "translation": [
+        "پرداخت باید ظرف ۳۰ روز از تاریخ صورتحساب انجام شود.",
+        "برای پرداخت‌های دیرهنگام ماهانه ۲ درصد بهره تعلق می‌گیرد.",
+        "تأمین‌کننده بدون رضایت کتبی حق واگذاری این قرارداد را ندارد."
+      ]
+    },
+    {
+      "name": "wrong_number",
+      "expected": "rejected",
+      "translation": [
+        "پرداخت باید ظرف ۱۳ روز از تاریخ صورتحساب انجام شود.",
+        "برای پرداخت‌های دیرهنگام ماهانه ۲ درصد بهره تعلق می‌گیرد.",
+        "تأمین‌کننده بدون رضایت کتبی حق واگذاری این قرارداد را ندارد."
+      ]
+    },
+    {
+      "name": "dropped_not",
+      "expected": "rejected",
+      "translation": [
+        "پرداخت باید ظرف ۳۰ روز از تاریخ صورتحساب انجام شود.",
+        "برای پرداخت‌های دیرهنگام ماهانه ۲ درصد بهره تعلق می‌گیرد.",
+        "تأمین‌کننده بدون رضایت کتبی می‌تواند این قرارداد را واگذار کند."
+      ]
+    }
+  ]
+}

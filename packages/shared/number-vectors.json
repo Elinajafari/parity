@@ -1,0 +1,199 @@
+{
+  "numbers_of": [
+    {
+      "text": "due in 30 days, 2 reminders, ref 007",
+      "numbers": [
+        "2",
+        "30",
+        "7"
+      ]
+    },
+    {
+      "text": "ظرف ۳۰ روز",
+      "numbers": [
+        "30"
+      ]
+    },
+    {
+      "text": "no numbers here",
+      "numbers": []
+    },
+    {
+      "text": "1,000 and 2.5",
+      "numbers": [
+        "0",
+        "1",
+        "2",
+        "5"
+      ]
+    },
+    {
+      "text": "۱٬۰۰۰ و ۲٫۵",
+      "numbers": [
+        "0",
+        "1",
+        "2",
+        "5"
+      ]
+    },
+    {
+      "text": "٤٢",
+      "numbers": [
+        "42"
+      ]
+    },
+    {
+      "text": "",
+      "numbers": []
+    },
+    {
+      "text": "x9y",
+      "numbers": [
+        "9"
+      ]
+    },
+    {
+      "text": "12 months at 2 percent",
+      "numbers": [
+        "12",
+        "2"
+      ]
+    },
+    {
+      "text": "0 and 00 and 000",
+      "numbers": [
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "numbers_differ": [
+    {
+      "source": "within 30 days",
+      "target": "ظرف ۳۰ روز",
+      "differ": false
+    },
+    {
+      "source": "within 30 days",
+      "target": "ظرف ۱۳ روز",
+      "differ": true
+    },
+    {
+      "source": "within 30 days",
+      "target": "ظرف سی روز",
+      "differ": false
+    },
+    {
+      "source": "2 percent a month for 12 months",
+      "target": "ماهانه ۲ درصد برای ۱۲ ماه",
+      "differ": false
+    },
+    {
+      "source": "2 percent a month for 12 months",
+      "target": "ماهانه ۲ درصد برای ۱ ماه",
+      "differ": true
+    },
+    {
+      "source": "no numbers",
+      "target": "بدون عدد",
+      "differ": false
+    },
+    {
+      "source": "ref 05",
+      "target": "ref 5",
+      "differ": false
+    },
+    {
+      "source": "pay 1,000",
+      "target": "pay 1000",
+      "differ": true
+    }
+  ],
+  "verdict_of": [
+    {
+      "readings": [
+        "faithful",
+        "faithful"
+      ],
+      "verdict": "certified"
+    },
+    {
+      "readings": [
+        "faithful",
+        "unclear"
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "readings": [
+        "unclear",
+        "altered"
+      ],
+      "verdict": "rejected"
+    },
+    {
+      "readings": [
+        "altered"
+      ],
+      "verdict": "rejected"
+    },
+    {
+      "readings": [
+        "faithful"
+      ],
+      "verdict": "certified"
+    }
+  ],
+  "clean_text": [
+    {
+      "raw": "a\u0000b\u001bc\n d",
+      "clean": "a b c d"
+    },
+    {
+      "raw": "  spaced   out  ",
+      "clean": "spaced out"
+    },
+    {
+      "raw": "tab\there",
+      "clean": "tab here"
+    }
+  ],
+  "filing_key": [
+    {
+      "source_lang": "English",
+      "target_lang": "Persian",
+      "sources": [
+        "a b"
+      ],
+      "targets": [
+        "c d"
+      ],
+      "key": "d1e6d9d6c20a4901e3d10f1be7bd005d8c62d694b30d3b49dd891763f4dd0dac"
+    },
+    {
+      "source_lang": " english ",
+      "target_lang": "PERSIAN",
+      "sources": [
+        "a b"
+      ],
+      "targets": [
+        "c d"
+      ],
+      "key": "d1e6d9d6c20a4901e3d10f1be7bd005d8c62d694b30d3b49dd891763f4dd0dac"
+    },
+    {
+      "source_lang": "English",
+      "target_lang": "Arabic",
+      "sources": [
+        "x 1 y",
+        "z"
+      ],
+      "targets": [
+        "w 1 v",
+        "q"
+      ],
+      "key": "eb11638bd34a8203a20146110695ef43eaef9ecedb930dadb2b8de307e4e0a6e"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "contract": "packages/contracts/parity.py",
+  "note": "Generated from the contract source and deployments/studionet.json; packages/contracts/tests/test_shape.py fails if either drifts from this file.",
+  "constructor": {},
+  "writes": {
+    "certify": {
+      "params": {
+        "title": "str",
+        "source_lang": "str",
+        "target_lang": "str",
+        "source": "str",
+        "translation": "str"
+      }
+    },
+    "withdraw": {
+      "params": {
+        "filing_id": "u256"
+      }
+    }
+  },
+  "views": {
+    "count": {
+      "params": {},
+      "returns": "u256"
+    },
+    "standing": {
+      "params": {
+        "filing_id": "u256"
+      },
+      "returns": "str"
+    },
+    "filing": {
+      "params": {
+        "filing_id": "u256"
+      },
+      "returns": "dict",
+      "fields": [
+        "altered",
+        "at",
+        "counted",
+        "filer",
+        "id",
+        "key",
+        "reason_is_leader_supplied",
+        "segments",
+        "source_lang",
+        "target_lang",
+        "title",
+        "unclear",
+        "verdict",
+        "why",
+        "withdrawn"
+      ],
+      "sampled_from_record": [
+        "filings",
+        0
+      ]
+    },
+    "segments_of": {
+      "params": {
+        "filing_id": "u256"
+      },
+      "returns": "dict",
+      "row_fields": [
+        "filing",
+        "how",
+        "index",
+        "reading",
+        "source",
+        "target"
+      ],
+      "sampled_from_record": [
+        "segments",
+        0,
+        0
+      ]
+    },
+    "find": {
+      "params": {
+        "key": "str"
+      },
+      "returns": "int"
+    },
+    "filings_of": {
+      "params": {
+        "who": "str"
+      },
+      "returns": "dict"
+    }
+  }
+}

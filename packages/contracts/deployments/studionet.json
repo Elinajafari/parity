@@ -1,0 +1,226 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract": "0x5F4648f5a5E9428FEA8Dd8e6Ec9Eb7c1bd36ce58",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x5F4648f5a5E9428FEA8Dd8e6Ec9Eb7c1bd36ce58",
+  "source_sha256": "08de14954169b5140fe11902f90ede66ff00e3da86a67dca6f7d31de17ce6d5e",
+  "deployer": "0x7A2855755c2a734406B87625434A0DEe24696aA5",
+  "steps": [
+    {
+      "step": "deploy",
+      "method": "deploy",
+      "from": "0x7A2855755c2a734406B87625434A0DEe24696aA5",
+      "tx": "0x0dbc471ebed05e014dc634bb010a0e000417707a511a3d6a2926075693999e4d",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": "",
+      "address": "0x5F4648f5a5E9428FEA8Dd8e6Ec9Eb7c1bd36ce58"
+    },
+    {
+      "step": "filing 0: faithful (expected certified)",
+      "method": "certify",
+      "from": "0x194370B59F1475376016881A3E7F927957632e14",
+      "tx": "0xa03bda3dbdfae6358ed378c529db8ab1909b5df9c3bdfb8f95ccd209a59f0d99",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "filing 1: wrong number (expected rejected)",
+      "method": "certify",
+      "from": "0x194370B59F1475376016881A3E7F927957632e14",
+      "tx": "0xfa8a253b27547328c22e32b5f061a3b3194a3437a23991458387e43314305653",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "filing 2: dropped not (expected rejected)",
+      "method": "certify",
+      "from": "0x194370B59F1475376016881A3E7F927957632e14",
+      "tx": "0xa96d1de32098b219af95d38d212903feaf71700ae14be75b462ec9037bae5da5",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "a translation missing a segment",
+      "method": "certify",
+      "from": "0x194370B59F1475376016881A3E7F927957632e14",
+      "tx": "0x70b854cc8e73d4a50eac671766b94c4e292fb511bd72acfba4642599bc137b58",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] the source has 3 segments and the translation 2; they are checked pair by pair"
+    },
+    {
+      "step": "the same translation checked again",
+      "method": "certify",
+      "from": "0x2c529B5138034F233E00A1e9C24a6D44ca631444",
+      "tx": "0x67afe76f15f9eb38208241b16e3ea13b52077175845b953dd787b2b10e89e360",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] this translation was already checked as filing 0; that verdict stands"
+    },
+    {
+      "step": "someone else withdraws filing 1",
+      "method": "withdraw",
+      "from": "0x2c529B5138034F233E00A1e9C24a6D44ca631444",
+      "tx": "0xea11bcd4595a6d0fa51507663e1b830aa36671ec6ec52b4638ed8cf75e3b48e1",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] only the filer may withdraw a filing"
+    },
+    {
+      "step": "the filer withdraws the wrong number",
+      "method": "withdraw",
+      "from": "0x194370B59F1475376016881A3E7F927957632e14",
+      "tx": "0x36f11a96b098339988025672011980e8839320de57e6ce27210908d7af2e7705",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    }
+  ],
+  "accounts": {
+    "deployer": "0x7A2855755c2a734406B87625434A0DEe24696aA5",
+    "filer": "0x194370B59F1475376016881A3E7F927957632e14",
+    "other": "0x2c529B5138034F233E00A1e9C24a6D44ca631444"
+  },
+  "filings": [
+    {
+      "altered": 0,
+      "at": "2026-09-24T12:44:03.647653Z",
+      "counted": 0,
+      "filer": "0x194370B59F1475376016881A3E7F927957632e14",
+      "id": 0,
+      "key": "91de91bd837ccb80c3fa0fee8c18f05397af5839e7dc8b7ddfe18b3b4c78ee5d",
+      "reason_is_leader_supplied": true,
+      "segments": 3,
+      "source_lang": "English",
+      "target_lang": "Persian",
+      "title": "Supply agreement, clause 4: payment and assignment",
+      "unclear": 0,
+      "verdict": "certified",
+      "why": "All three translations accurately convey the source meaning.",
+      "withdrawn": false
+    },
+    {
+      "altered": 1,
+      "at": "2026-09-24T12:45:07.197206Z",
+      "counted": 1,
+      "filer": "0x194370B59F1475376016881A3E7F927957632e14",
+      "id": 1,
+      "key": "db188a1e3f024e1ce00fc0e7296625b8ea8d63e415794f51c595214048c1a78d",
+      "reason_is_leader_supplied": true,
+      "segments": 3,
+      "source_lang": "English",
+      "target_lang": "Persian",
+      "title": "Supply agreement, clause 4: payment and assignment",
+      "unclear": 0,
+      "verdict": "rejected",
+      "why": "Both translations accurately convey the original meaning without additions or omissions.",
+      "withdrawn": true
+    },
+    {
+      "altered": 1,
+      "at": "2026-09-24T12:45:34.304991Z",
+      "counted": 0,
+      "filer": "0x194370B59F1475376016881A3E7F927957632e14",
+      "id": 2,
+      "key": "53f710327761ff1fbd9addc1886dc69c4355120109de8b4d7b8938897fe0211e",
+      "reason_is_leader_supplied": true,
+      "segments": 3,
+      "source_lang": "English",
+      "target_lang": "Persian",
+      "title": "Supply agreement, clause 4: payment and assignment",
+      "unclear": 0,
+      "verdict": "rejected",
+      "why": "Pair 2 reverses negation: source prohibits assignment without consent; translation permits it.",
+      "withdrawn": false
+    }
+  ],
+  "segments": [
+    [
+      {
+        "filing": 0,
+        "how": "read",
+        "index": 0,
+        "reading": "faithful",
+        "source": "Payment is due within 30 days of the invoice date.",
+        "target": "پرداخت باید ظرف ۳۰ روز از تاریخ صورتحساب انجام شود."
+      },
+      {
+        "filing": 0,
+        "how": "read",
+        "index": 1,
+        "reading": "faithful",
+        "source": "Late payments carry interest of 2 percent per month.",
+        "target": "برای پرداخت‌های دیرهنگام ماهانه ۲ درصد بهره تعلق می‌گیرد."
+      },
+      {
+        "filing": 0,
+        "how": "read",
+        "index": 2,
+        "reading": "faithful",
+        "source": "The supplier may not assign this agreement without written consent.",
+        "target": "تأمین‌کننده بدون رضایت کتبی حق واگذاری این قرارداد را ندارد."
+      }
+    ],
+    [
+      {
+        "filing": 1,
+        "how": "counted",
+        "index": 0,
+        "reading": "altered",
+        "source": "Payment is due within 30 days of the invoice date.",
+        "target": "پرداخت باید ظرف ۱۳ روز از تاریخ صورتحساب انجام شود."
+      },
+      {
+        "filing": 1,
+        "how": "read",
+        "index": 1,
+        "reading": "faithful",
+        "source": "Late payments carry interest of 2 percent per month.",
+        "target": "برای پرداخت‌های دیرهنگام ماهانه ۲ درصد بهره تعلق می‌گیرد."
+      },
+      {
+        "filing": 1,
+        "how": "read",
+        "index": 2,
+        "reading": "faithful",
+        "source": "The supplier may not assign this agreement without written consent.",
+        "target": "تأمین‌کننده بدون رضایت کتبی حق واگذاری این قرارداد را ندارد."
+      }
+    ],
+    [
+      {
+        "filing": 2,
+        "how": "read",
+        "index": 0,
+        "reading": "faithful",
+        "source": "Payment is due within 30 days of the invoice date.",
+        "target": "پرداخت باید ظرف ۳۰ روز از تاریخ صورتحساب انجام شود."
+      },
+      {
+        "filing": 2,
+        "how": "read",
+        "index": 1,
+        "reading": "faithful",
+        "source": "Late payments carry interest of 2 percent per month.",
+        "target": "برای پرداخت‌های دیرهنگام ماهانه ۲ درصد بهره تعلق می‌گیرد."
+      },
+      {
+        "filing": 2,
+        "how": "read",
+        "index": 2,
+        "reading": "altered",
+        "source": "The supplier may not assign this agreement without written consent.",
+        "target": "تأمین‌کننده بدون رضایت کتبی می‌تواند این قرارداد را واگذار کند."
+      }
+    ]
+  ],
+  "standing": [
+    "certified",
+    "withdrawn",
+    "rejected"
+  ]
+}
