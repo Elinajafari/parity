@@ -1,0 +1,133 @@
+{
+  "network": "studionet",
+  "contract": "0x5F4648f5a5E9428FEA8Dd8e6Ec9Eb7c1bd36ce58",
+  "accounts": {
+    "filer_a": "0x1F0A830FAd38B2Ff15835a7AfE465409c457e088",
+    "filer_b": "0xdB091B8F6ad722f43BfE79aac3C38fdb221466Ea"
+  },
+  "steps": [
+    {
+      "step": "filing 3: a faithful translation (expected certified)",
+      "method": "certify",
+      "from": "0x1F0A830FAd38B2Ff15835a7AfE465409c457e088",
+      "tx": "0x5056538fecdf91b49b6274b292d398d1dbc01a49cc183251393ee8450f781644",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "filing 4: both numbers changed (expected rejected, no model)",
+      "method": "certify",
+      "from": "0xdB091B8F6ad722f43BfE79aac3C38fdb221466Ea",
+      "tx": "0x118aa49b5669324543393d27d7f560163cc5aaf1b51aa6318223b0cd29b034e4",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "filer B withdraws filing 3",
+      "method": "withdraw",
+      "from": "0xdB091B8F6ad722f43BfE79aac3C38fdb221466Ea",
+      "tx": "0xbb89ff4205225db7d9c3554346b6e79bb826cfa31e83110a62448d706d56fc10",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] only the filer may withdraw a filing"
+    },
+    {
+      "step": "the same translation filed again",
+      "method": "certify",
+      "from": "0x1F0A830FAd38B2Ff15835a7AfE465409c457e088",
+      "tx": "0x6f8e80a365108030d438f3f4e6784db52545dfc57f3d3ab5e7dc58f9fa73982f",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] this translation was already checked as filing 3; that verdict stands"
+    },
+    {
+      "step": "filer B withdraws its own filing 4",
+      "method": "withdraw",
+      "from": "0xdB091B8F6ad722f43BfE79aac3C38fdb221466Ea",
+      "tx": "0x4ed3e629e397e01d25467c8030973f7f6b526f38c3f988158499d29682a93b5e",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    }
+  ],
+  "filings": {
+    "3": {
+      "filing": {
+        "altered": 0,
+        "at": "2026-09-26T16:11:20.590721Z",
+        "counted": 0,
+        "filer": "0x1F0A830FAd38B2Ff15835a7AfE465409c457e088",
+        "id": 3,
+        "key": "0458d6f035ceb01dbb6a6bb3ee33fda79f1fd759957e3c5b5284ced408e27185",
+        "reason_is_leader_supplied": true,
+        "segments": 2,
+        "source_lang": "English",
+        "target_lang": "Persian",
+        "title": "Warehouse notice: opening hours and shipping",
+        "unclear": 0,
+        "verdict": "certified",
+        "why": "Both translations convey exactly the source meaning without addition or omission.",
+        "withdrawn": false
+      },
+      "segments": [
+        {
+          "filing": 3,
+          "how": "read",
+          "index": 0,
+          "reading": "faithful",
+          "source": "The warehouse opens at 8 in the morning.",
+          "target": "انبار ساعت ۸ صبح باز می‌شود."
+        },
+        {
+          "filing": 3,
+          "how": "read",
+          "index": 1,
+          "reading": "faithful",
+          "source": "Orders placed before noon ship the same day.",
+          "target": "سفارش‌هایی که قبل از ظهر ثبت شوند همان روز ارسال می‌شوند."
+        }
+      ],
+      "standing": "certified"
+    },
+    "4": {
+      "filing": {
+        "altered": 2,
+        "at": "2026-09-26T16:11:46.445710Z",
+        "counted": 2,
+        "filer": "0xdB091B8F6ad722f43BfE79aac3C38fdb221466Ea",
+        "id": 4,
+        "key": "662650bd803f9509d459c457026a6474d2188abfad584e7bc97706c45b12b7c1",
+        "reason_is_leader_supplied": true,
+        "segments": 2,
+        "source_lang": "English",
+        "target_lang": "Persian",
+        "title": "Warehouse notice: hours and returns",
+        "unclear": 0,
+        "verdict": "rejected",
+        "why": "",
+        "withdrawn": true
+      },
+      "segments": [
+        {
+          "filing": 4,
+          "how": "counted",
+          "index": 0,
+          "reading": "altered",
+          "source": "The warehouse opens at 8 in the morning.",
+          "target": "انبار ساعت ۹ صبح باز می‌شود."
+        },
+        {
+          "filing": 4,
+          "how": "counted",
+          "index": 1,
+          "reading": "altered",
+          "source": "Returns are accepted within 14 days.",
+          "target": "مرجوعی تا ۴۱ روز پذیرفته می‌شود."
+        }
+      ],
+      "standing": "withdrawn"
+    }
+  }
+}

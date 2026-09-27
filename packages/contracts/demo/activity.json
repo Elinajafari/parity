@@ -1,0 +1,29 @@
+{
+  "note": "The second round: two new wallets on the already deployed contract. Read by scripts/seed-activity.mjs.",
+  "source_lang": "English",
+  "target_lang": "Persian",
+  "faithful": {
+    "title": "Warehouse notice: opening hours and shipping",
+    "source": [
+      "The warehouse opens at 8 in the morning.",
+      "Orders placed before noon ship the same day."
+    ],
+    "translation": [
+      "انبار ساعت ۸ صبح باز می‌شود.",
+      "سفارش‌هایی که قبل از ظهر ثبت شوند همان روز ارسال می‌شوند."
+    ],
+    "expected": "certified"
+  },
+  "counted": {
+    "title": "Warehouse notice: hours and returns",
+    "source": [
+      "The warehouse opens at 8 in the morning.",
+      "Returns are accepted within 14 days."
+    ],
+    "translation": [
+      "انبار ساعت ۹ صبح باز می‌شود.",
+      "مرجوعی تا ۴۱ روز پذیرفته می‌شود."
+    ],
+    "expected": "rejected"
+  }
+}

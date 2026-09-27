@@ -1,6 +1,7 @@
 // Write EVIDENCE.md: every transaction of the demo, read back FROM THE CHAIN.
 //
-//   pnpm evidence:contract
+//   pnpm evidence:contract     # the deployment and its demo -> EVIDENCE.md
+//   pnpm evidence:activity     # the second round -> EVIDENCE-ACTIVITY.md
 //   node scripts/evidence.mjs <record.json> <EVIDENCE.md> <Name>   # any record
 //
 // deployments/studionet.json says what the scripts did. This file does not
@@ -86,8 +87,8 @@ sender, the status and the outcome come from the node's answer for each hash,
 not from the deployment record. ${mismatches === 0 ? "Every outcome on chain matches the record." : `**${mismatches} row(s) disagree with the record.**`}
 
 - **Contract:** ${addrLink(record.contract)}
-- **Deploy transaction:** ${txLink(deploy.tx)}
-- **Source sha256:** \`${record.source_sha256}\`
+${deploy ? `- **Deploy transaction:** ${txLink(deploy.tx)}` : "- **Round:** new wallets on the contract already deployed; no deploy in this round"}
+${record.source_sha256 ? `- **Source sha256:** \`${record.source_sha256}\`` : `- **The deployment itself:** [EVIDENCE.md](EVIDENCE.md)`}
 - **Transactions:** ${record.steps.length}, from ${sent.size} different wallets
 - **Generated:** ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC
 
